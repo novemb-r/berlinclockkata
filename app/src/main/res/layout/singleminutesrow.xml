@@ -7,26 +7,18 @@
 
     <View
         android:id="@+id/firstminute"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        style="@style/bearingpoint"/>
 
     <View
         android:id="@+id/secondminute"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        style="@style/bearingpoint"/>
 
     <View
         android:id="@+id/thirdminute"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        style="@style/bearingpoint"/>
 
     <View
         android:id="@+id/fourthminute"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        style="@style/bearingpoint"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
