@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="11">
+
+    <View
+        android:id="@+id/bearing_one"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_two"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_three"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_four"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_five"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_six"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_seven"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_height"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_nine"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_ten"
+        style="@style/bearingpoint"/>
+    <View
+        android:id="@+id/bearing_eleven"
+        style="@style/bearingpoint"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
