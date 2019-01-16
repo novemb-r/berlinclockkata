@@ -25,15 +25,17 @@ class FiveMinutesRow @JvmOverloads constructor(
     }
 
     private fun updateView() {
-        val childCount = parent_layout.childCount
-        for (i in 0 until childCount) {
-            if (row.length > i) {
-                val v: View = parent_layout.getChildAt(i)
-                if (row[i] == 'R')
-                    v.setBackgroundColor(ContextCompat.getColor(context, R.color.katared))
-                else if (row[i] == 'Y')
-                    v.setBackgroundColor(ContextCompat.getColor(context, R.color.kataOrange))
-            }
+        parent_layout.weightSum = row.length * 1f
+        for (i in 0 until row.length) {
+            val v = View(context, null, 0, R.style.bearingpoint)
+            v.layoutParams = LayoutParams(0, LayoutParams.MATCH_PARENT, 1f)
+            if (row[i] == 'R')
+                v.setBackgroundColor(ContextCompat.getColor(context, R.color.katared))
+            else if (row[i] == 'Y')
+                v.setBackgroundColor(ContextCompat.getColor(context, R.color.kataOrange))
+            else
+                v.setBackgroundColor(ContextCompat.getColor(context, R.color.katablack))
+            parent_layout.addView(v)
         }
     }
 }
