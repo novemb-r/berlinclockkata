@@ -12,6 +12,7 @@ class Converter {
     var convFiveMinRow: String = ""
     var convSingleHoursRow: String = ""
     var convFourHoursRow: String = ""
+    var convSecondRow: String = ""
 
 
     fun setDate(hour: Int, min: Int, second: Int) : Converter {
@@ -28,6 +29,7 @@ class Converter {
         convertToFiveMinRow()
         convertToSingleHoursRow()
         convertToFourHoursRow()
+        convertToSecondRow()
     }
 
     private fun convertToSingleMinRow() {
@@ -44,7 +46,9 @@ class Converter {
 
     private fun convertToFiveMinRow() {
         convFiveMinRow = ""
-        val nbrLight: Int = _min / 5
+        val nbrLight: Int = _min / 5 + 1 //+1 because we start at 1 in the loop
+
+        Log.d("kata", nbrLight.toString())
 
         for (i in 1 until 12) { //start to 1 to be sync with the view
             if (i < nbrLight && i %3 == 0)
@@ -62,7 +66,7 @@ class Converter {
 
         for (i in 0 until 4) {
             if (i < nbrLight)
-                convSingleHoursRow += 'Y'
+                convSingleHoursRow += 'R'
             else
                 convSingleHoursRow += 'O'
         }
@@ -74,13 +78,20 @@ class Converter {
 
         for (i in 0 until 4) {
             if (i < nbrLight)
-                convFourHoursRow += 'Y'
+                convFourHoursRow += 'R'
             else
                 convFourHoursRow += 'O'
         }
     }
 
+    private fun convertToSecondRow() {
+        convSecondRow = "O"
+
+        if (_sec % 2 == 0)
+            convSecondRow = "Y"
+    }
+
     override fun toString(): String {
-        return convFourHoursRow + convSingleHoursRow + convFiveMinRow + convSingleMinRow
+        return convSecondRow + convFourHoursRow + convSingleHoursRow + convFiveMinRow + convSingleMinRow
     }
 }
