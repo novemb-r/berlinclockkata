@@ -7,13 +7,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <e.mf_raphael.berlinclock.customview.FiveMinutesRow
+    <e.mf_raphael.berlinclock.customview.GenericRow
+        android:id="@+id/fourhoursrow"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <e.mf_raphael.berlinclock.customview.SingleMinutesRow
+    <e.mf_raphael.berlinclock.customview.GenericRow
+        android:id="@+id/singlehoursrow"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
+    <e.mf_raphael.berlinclock.customview.GenericRow
+        android:id="@+id/fiveminutesrow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <e.mf_raphael.berlinclock.customview.GenericRow
+        android:id="@+id/singleminutesrow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>
