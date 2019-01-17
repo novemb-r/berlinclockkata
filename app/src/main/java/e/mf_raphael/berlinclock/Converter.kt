@@ -9,6 +9,7 @@ class Converter {
     private var _sec: Int = 0
 
     var convSingleMinRow: String = ""
+    var convFiveMinRow: String = ""
 
 
     fun setDate(hour: Int, min: Int, second: Int) : Converter {
@@ -22,6 +23,7 @@ class Converter {
 
     private fun convert() {
         convertToSingleMinRow()
+        convertToFiveMinRow()
     }
 
     private fun convertToSingleMinRow() {
@@ -37,8 +39,22 @@ class Converter {
         }
     }
 
+    private fun convertToFiveMinRow() {
+        convFiveMinRow = ""
+        val nbrLight: Int = _min / 5
+
+        for (i in 1 until 12) { //start to 1 to be sync with the view
+            if (i < nbrLight && i %3 == 0)
+                convFiveMinRow += 'R'
+            else if (i < nbrLight)
+                convFiveMinRow += 'Y'
+            else
+                convFiveMinRow += 'O'
+        }
+    }
+
 
     override fun toString(): String {
-        return convSingleMinRow
+        return convFiveMinRow + convSingleMinRow
     }
 }

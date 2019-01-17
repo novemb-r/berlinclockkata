@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("kata Clock : ", converter.toString())
 
         singleminutesrow.updateRow(converter.convSingleMinRow)
-        fiveminutesrow.updateRow("YYRYYROOOOO")
+        fiveminutesrow.updateRow(converter.convFiveMinRow)
         singlehoursrow.updateRow("YYOO")
         fourhoursrow.updateRow("YOOO")
 
