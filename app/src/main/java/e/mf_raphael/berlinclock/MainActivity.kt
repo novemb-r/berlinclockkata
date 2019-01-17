@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val converter : Converter = Converter().setDate(11 ,37 ,1 )
+        val converter : Converter = Converter().setDate(22 ,26 ,10 )
 
         Log.d("kata Clock : ", converter.toString())
 

@@ -16,6 +16,13 @@ class Converter {
 
 
     fun setDate(hour: Int, min: Int, second: Int) : Converter {
+        if (hour > 24 || hour < 0)
+            throw Error("hour is not good!")
+        if (min > 60 || min < 0)
+            throw Error("min is not good!")
+        if (second > 60 || second < 0)
+            throw Error("second is not good!")
+
         _hour = hour
         _min = min
         _sec = second
