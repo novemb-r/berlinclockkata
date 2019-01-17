@@ -11,13 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val converter : Converter = Converter().setDate(12,51,36)
+        val converter : Converter = Converter().setDate(15,51,36)
 
         Log.d("kata Clock : ", converter.toString())
 
         singleminutesrow.updateRow(converter.convSingleMinRow)
         fiveminutesrow.updateRow(converter.convFiveMinRow)
-        singlehoursrow.updateRow("YYOO")
+        singlehoursrow.updateRow(converter.convSingleHoursRow)
         fourhoursrow.updateRow("YOOO")
 
     }
