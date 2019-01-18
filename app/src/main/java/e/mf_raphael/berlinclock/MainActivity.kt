@@ -20,5 +20,7 @@ class MainActivity : AppCompatActivity() {
         singlehoursrow.updateRow(converter.convSingleHoursRow)
         fourhoursrow.updateRow(converter.convFourHoursRow)
 
+        Log.d("kata parse : ", Converter().parse("ORROOROOOYYRYYRYOOOOYYOO"))
+
     }
 }

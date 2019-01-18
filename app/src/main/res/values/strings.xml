@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">berlinclock</string>
+    <string name="app_name">Berlin Clock</string>
+
+    <!-- Error message -->
+    <string name="bad_length">Berlin time should be 24 length</string>
+
 </resources>

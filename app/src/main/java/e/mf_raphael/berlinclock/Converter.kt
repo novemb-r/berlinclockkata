@@ -26,12 +26,16 @@ class Converter {
         _hour = hour
         _min = min
         _sec = second
-        convert()
+        convertToBerlinTime()
 
         return this
     }
 
-    private fun convert() {
+    fun getDate() : String {
+        return _hour.toString() + ":" + _min.toString() + ":" + _sec.toString()
+    }
+
+    private fun convertToBerlinTime() {
         convertToSingleMinRow()
         convertToFiveMinRow()
         convertToSingleHoursRow()
@@ -101,4 +105,55 @@ class Converter {
     override fun toString(): String {
         return convSecondRow + convFourHoursRow + convSingleHoursRow + convFiveMinRow + convSingleMinRow
     }
+
+    fun parse(berlinTime: String) : String {
+        if (berlinTime.length != 24)
+            throw Error("Berlin time should be 24 length")
+
+        var sec = parseSecond(berlinTime[0])
+        var hours = parseHours(berlinTime.substring(1, 5), berlinTime.substring(5, 9))
+        var min = parseMinutes(berlinTime.substring(9, 20), berlinTime.substring(20))
+
+        return hours.toString()+":"+min.toString()+":"+sec.toString()
+    }
+
+    private fun parseHours(fiveRow : String, singleRow : String) : Int {
+        var hour = 0
+
+        for(i in 0 until fiveRow.length) {
+            if (fiveRow[i] == 'R')
+                hour += 5
+        }
+
+        for(i in 0 until singleRow.length) {
+            if (singleRow[i] == 'R')
+                hour++
+        }
+
+        return hour
+    }
+
+    private fun parseMinutes(fiveRow : String, singleRow : String) : Int {
+        var min = 0
+
+        for(i in 0 until fiveRow.length) {
+            if (fiveRow[i] == 'Y' || fiveRow[i] == 'R')
+                min += 5
+        }
+
+        for(i in 0 until singleRow.length) {
+            if (singleRow[i] == 'Y')
+                min++
+        }
+
+        return min
+    }
+
+    private fun parseSecond(second : Char) : Int {
+        if (second == 'Y')
+            return 0
+        else
+            return 1
+    }
+
 }
