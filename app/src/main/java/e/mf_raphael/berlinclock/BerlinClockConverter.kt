@@ -2,7 +2,7 @@ package e.mf_raphael.berlinclock
 
 import android.util.Log
 
-class Converter {
+class BerlinClockConverter {
 
     private var _hour: Int = 0
     private var _min: Int = 0
@@ -15,7 +15,7 @@ class Converter {
     var convSecondRow: String = ""
 
 
-    fun setDate(hour: Int, min: Int, second: Int) : Converter {
+    fun setDate(hour: Int, min: Int, second: Int) : BerlinClockConverter {
         if (hour > 24 || hour < 0)
             throw Error("hour is not good!")
         if (min > 60 || min < 0)

@@ -11,16 +11,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val converter : Converter = Converter().setDate(22 ,26 ,10 )
+        val berlinClockConverter : BerlinClockConverter = BerlinClockConverter().setDate(22 ,26 ,10 )
 
-        Log.d("kata Clock : ", converter.toString())
+        Log.d("kata Clock : ", berlinClockConverter.toString())
 
-        singleminutesrow.updateRow(converter.convSingleMinRow)
-        fiveminutesrow.updateRow(converter.convFiveMinRow)
-        singlehoursrow.updateRow(converter.convSingleHoursRow)
-        fourhoursrow.updateRow(converter.convFourHoursRow)
+        singleminutesrow.updateRow(berlinClockConverter.convSingleMinRow)
+        fiveminutesrow.updateRow(berlinClockConverter.convFiveMinRow)
+        singlehoursrow.updateRow(berlinClockConverter.convSingleHoursRow)
+        fourhoursrow.updateRow(berlinClockConverter.convFourHoursRow)
 
-        Log.d("kata parse : ", Converter().parse("ORROOROOOYYRYYRYOOOOYYOO"))
+        Log.d("kata parse : ", BerlinClockConverter().parse("ORROOROOOYYRYYRYOOOOYYOO"))
 
     }
 }
