@@ -16,3 +16,6 @@ The differents attributes of the BerlinClockConverter contains all the converted
 - berlinClockConverter.convFiveMinRow
 - berlinClockConverter.convSingleHoursRow
 - berlinClockConverter.convFiveHoursRow
+
+To convert berlin clock time to digital time, use the function `parse(berlinTime)` which return the digital time:
+    BerlinClockConverter().parse("ORROOROOOYYRYYRYOOOOYYOO")
