@@ -39,7 +39,7 @@ class BerlinClockConverter {
         convertToSingleMinRow()
         convertToFiveMinRow()
         convertToSingleHoursRow()
-        convertToFourHoursRow()
+        convertToFiveHoursRow()
         convertToSecondRow()
     }
 
@@ -83,7 +83,7 @@ class BerlinClockConverter {
         }
     }
 
-    private fun convertToFourHoursRow() {
+    private fun convertToFiveHoursRow() {
         convFourHoursRow = ""
         val nbrLight: Int = _hour / 5
 
