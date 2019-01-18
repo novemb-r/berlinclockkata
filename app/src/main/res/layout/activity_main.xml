@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <e.mf_raphael.berlinclock.customview.GenericRow
+        android:id="@+id/secondrow"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"/>
+
     <e.mf_raphael.berlinclock.customview.GenericRow
         android:id="@+id/fourhoursrow"
         android:layout_width="match_parent"

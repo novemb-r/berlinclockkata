@@ -11,10 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val berlinClockConverter : BerlinClockConverter = BerlinClockConverter().setDate(22 ,26 ,10 )
+        val berlinClockConverter : BerlinClockConverter = BerlinClockConverter().setDate(22 ,26 ,11 )
 
         Log.d("kata Clock : ", berlinClockConverter.toString())
 
+        secondrow.updateRow(berlinClockConverter.convSecondRow)
         singleminutesrow.updateRow(berlinClockConverter.convSingleMinRow)
         fiveminutesrow.updateRow(berlinClockConverter.convFiveMinRow)
         singlehoursrow.updateRow(berlinClockConverter.convSingleHoursRow)
